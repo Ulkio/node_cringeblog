@@ -95,7 +95,6 @@ main h2 {
 /********** FORM ******/
 
 main form {
-  width: 40%;
   margin: auto;
   text-align: center;
   border: 3px solid #9b9b9b;
@@ -111,7 +110,7 @@ main form label {
 main form input {
   display: block;
   margin: 25px auto;
-  width: 70%;
+  width: 30%;
 }
 
 main form textarea {
@@ -175,7 +174,6 @@ hr {
 }
 
 .comment-article {
-  width: 30%;
   margin: auto;
 }
 .comment-article article {

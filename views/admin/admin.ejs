@@ -1,0 +1,66 @@
+<div class="admin">
+    <div>
+        <h2 class="admin-title">Page d'administration</h2>
+        <h3>
+            <a href="/admin/post">Ajouter un article</a>
+        </h3>
+    </div>
+
+    <div class="posts-container">
+        <% posts.forEach(post=> { %>
+            <div class="post-container">
+
+
+                <div class="post">
+                    <span class="post-header">
+                        Titre
+                    </span>
+                    <p>
+                        <a href="/post/<%= post.Id %> ">
+                            <%= post.Title %>
+                        </a>
+                    </p>
+                    <span class="post-header">
+                        Contenu
+                    </span>
+                    <p>
+                        <%= post.Contents %>
+                    </p>
+                    <span class="post-header">
+                        Auteur
+                    </span>
+                    <p>
+                        <%= post.FirstName %>
+                            <%= post.LastName %>
+                    </p>
+                    <span class="post-header">
+                        Catégorie
+                    </span>
+                    <p>
+                        <%= post.Name %>
+                    </p>
+                </div>
+                <div class="action">
+                    <a onclick="check(event)" href="/admin/delete/<%= post.Id %>">
+                        Supprimer
+                    </a>
+                    <a href="/admin/update/<%= post.Id %>">
+                        Editer
+                    </a>
+                </div>
+            </div>
+
+            <% }) %>
+    </div>
+
+
+</div>
+</div>
+<script>
+    function check(e) {
+        if (!window.confirm("Supprimer le post ?")) {
+            e.preventDefault();
+            return;
+        }
+    }
+</script>

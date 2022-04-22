@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+.xl-txt {
+  font-size: 3.5rem;
+}
+
+.md-txt {
+  font-size: 2.8rem;
+}
+
+.sm-txt {
+  font-size: 1.9rem;
+}
+
+/****** HEADER *******/
+
+.blog-header {
+  background-image: url("../assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.blog-header div {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 100px 0 0;
+}
+
+.blog-header h1 {
+  text-align: center;
+}
+
+.blog-header h1 a {
+  color: white;
+  font-size: 1.5em;
+}
+
+.blog-header nav {
+  text-align: right;
+  padding: 50px;
+}
+
+.blog-header nav a {
+  color: white;
+  margin: 10px;
+}
+
+/****** MAIN  *******/
+main {
+  padding: 3% 10%;
+}
+
+/* main p {
+  text-align: center;
+} */
+
+main h2 {
+  color: #9b9b9b;
+  text-align: center;
+}
+
+.back {
+  font-size: 1.8rem;
+  padding: 1%;
+  color: rgb(0, 70, 128);
+  width: fit-content;
+  /* margin: 2% auto; */
+  outline: none;
+  box-shadow: 2px 2px 4px #333;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+
+.edit {
+  color: #0cd6b4;
+}
+
+.remove {
+  color: red;
+}
+/********** FORM ******/
+
+main form {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  border: 3px solid #9b9b9b;
+  padding: 25px 50px;
+  border-radius: 50px;
+}
+
+main form label {
+  color: #9b9b9b;
+  text-decoration: underline;
+}
+
+main form input {
+  display: block;
+  margin: 25px auto;
+  width: 70%;
+}
+
+main form textarea {
+  display: block;
+  margin: 25px auto;
+  width: 70%;
+  height: 120px;
+}
+
+main form input[type="submit"] {
+  height: 40px;
+  width: 50%;
+  background-color: #0cd6b4;
+  border: none;
+  border-radius: 10px;
+}
+
+main form select {
+  display: block;
+  margin: 25px auto;
+  width: 70%;
+  text-align: center;
+}
+
+/********** HOME ****/
+
+.home-list article {
+  /* text-align: left; */
+  list-style: none;
+  margin: 30px auto;
+  width: 50%;
+}
+
+.home-list article a {
+  display: block;
+  color: #0cd6b4;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/********** ARTICLE ****/
+
+.article-detail {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.article-detail h2 {
+  color: #0cd6b4;
+  margin-bottom: 25px;
+}
+
+.auth {
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+hr {
+  margin: 25px 0;
+}
+
+.comment-article {
+  width: 30%;
+  margin: auto;
+}
+.comment-article article {
+  margin: 20px;
+}
+
+.comment-article article div {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-article h3 {
+  color: #32d37b;
+  font-size: 1.2em;
+}
+
+.comment-article p {
+  text-align: left;
+  margin: 5px;
+  font-size: 0.9em;
+}
+
+.comment-article p.date-comment {
+  font-size: 0.7em;
+}
+
+.divider {
+  height: 1px;
+  width: 80px;
+  background-color: grey;
+  margin: auto;
+}
+
+/********** ADMIN ****/
+/* 
+#admin-panel h2 {
+	color: #333;
+}
+
+#admin-panel {
+	padding: 0;
+	width: 100vw;
+	min-height: 50vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.main-ctn{
+	width: 30%;
+	background-color: #0cd6b4;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.main-ctn a {
+	padding: 2% 0 2% 5%;
+	margin-top: 3%;
+	text-decoration: none;
+	color: #333;
+}
+
+.main-ctn a.active {
+	background-color: #c2ebe4;
+}
+
+.secondary-ctn{
+	width: 70%;
+	background-color: #c2ebe4;
+	padding: 2%;
+} */
+
+/* c'est moche */
+
+.admin-title {
+  font-size: 2em;
+  color: rgba(0, 255, 213);
+}
+.admin a {
+  text-decoration: none;
+  color: black;
+}
+.admin h3 a {
+  font-size: 1.2em;
+  background: rgb(185, 185, 185);
+  padding: 0.5em;
+}
+.admin .posts-container {
+  width: 100%;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+}
+.post-header {
+  font-weight: bold;
+}
+.post {
+  width: 100%;
+  border: solid rgba(0, 255, 213) 1px;
+  padding: 1em;
+}
+.post p {
+  margin-bottom: 1em;
+}
+
+.action {
+  display: flex;
+}
+.action a {
+  padding: 1em;
+  margin: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.action a:first-child {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.action a:nth-child(2) {
+  background-color: rgba(0, 255, 213, 0.5);
+}
+/********** FOOTER *************/
+
+.blog-footer {
+  background-color: #0cd6b4;
+  text-align: center;
+  padding: 25px;
+}

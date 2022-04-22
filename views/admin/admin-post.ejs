@@ -1,0 +1,29 @@
+<h1>Ajoutez un article</h1>
+<h3>
+    <a class="back" href="/admin">Retour</a>
+</h3>
+<form action="/admin/post" method="post">
+    <label for="title">Titre de l'article :</label>
+    <input type="text" name="title" id="title">
+    <label for="content">Contenu de l'article :</label>
+    <textarea type="text" name="content" id="content" /></textarea>
+
+    <!-- 2*select auteur/categorie -->
+    <select name="author" id="author">
+        <% authors.forEach(author=> { %>
+            <option value=<%=author.Id %> >
+                <%= author.FirstName %>
+                    <%= author.LastName %>
+            </option>
+            <% }); %>
+    </select>
+    <select name="category" id="category">
+
+        <% categories.forEach(categorie=> { %>
+            <option value=<%=categorie.Id %> >
+                <%= categorie.Name %>
+            </option>
+            <% }); %>
+    </select>
+    <input type="submit" value="Envoyer">
+</form>

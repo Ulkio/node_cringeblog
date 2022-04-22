@@ -1,0 +1,43 @@
+<article class="article-detail">
+    <h2>
+        <%= post.Title %>
+    </h2>
+
+    <p>
+        <%= post.Contents %>
+    </p>
+    <p class="auth">
+        par : <%= post.FirstName %>
+            <%= post.LastName %>
+    </p>
+</article>
+<hr>
+<div class="comment-article">
+
+    <% comments.forEach(comment=> { %>
+        <article>
+            <div>
+                <h3>
+                    <%= comment.NickName %>
+                </h3>
+                <p class="date-comment">
+                    <%= comment.CreationTimestamp.toLocaleDateString() %>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <%= comment.Contents %>
+                </p>
+            </div>
+        </article>
+        <hr class="divider">
+        <% }) %>
+</div>
+
+<form action="/post/<%- post.Id %>" method="post">
+    <label for="alias">Alias :</label>
+    <input type="text" name="alias" id="alias">
+    <label for="message">Votre message :</label>
+    <textarea type="text" name="message" id="message" /></textarea>
+    <input type="submit" value="Envoyer le com' !">
+</form>

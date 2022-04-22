@@ -1,0 +1,12 @@
+<h1>Editez un article</h1>
+<h3>
+    <a class="back" href="/admin">Retour</a>
+</h3>
+<form id="form" action="/admin/update/<%= post.Id %> " method="post">
+    <label for="title">Titre de l'article :</label>
+    <input type="text" name="title" id="title" value="<%= post.Title %> ">
+    <label for="content">Contenu de l'article :</label>
+    <textarea type="text" name="content" id="content" />
+    <%= post.Contents %> </textarea>
+        <input type="submit" value="Éditer" onclick="check()">
+</form>

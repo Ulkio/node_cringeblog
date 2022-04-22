@@ -176,8 +176,12 @@ hr {
 .comment-article {
   margin: auto;
 }
+
+.comment-article article:nth-child(2n) {
+  background-color: rgb(240, 240, 240);
+}
 .comment-article article {
-  margin: 20px;
+  padding: 1em;
 }
 
 .comment-article article div {
